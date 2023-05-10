@@ -123,11 +123,11 @@ describe("meal.js", function() {
   })
 
   describe("createRecipe", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(createRecipe);
     });
 
-    it.skip("should return a recipe object", function() {
+    it("should return a recipe object", function() {
       var ingredients = [];
       addIngredients("eggs", ingredients);
       addIngredients("bacon", ingredients);
@@ -144,7 +144,7 @@ describe("meal.js", function() {
     });
 
 
-    it.skip("should return a different recipe object", function () {
+    it("should return a different recipe object", function () {
       var ingredients = [];
       addIngredients("bread", ingredients);
       addIngredients("cheese", ingredients);
