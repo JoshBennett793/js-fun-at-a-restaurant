@@ -21,11 +21,15 @@ function formatPrice(price) {
 	return `$${price}`;
 }
 
+function decreasePrice(price) {
+	return price *= .90;
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
+  decreasePrice,
   // createRecipe
 };
