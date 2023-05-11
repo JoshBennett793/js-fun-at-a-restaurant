@@ -12,9 +12,18 @@ function refundOrder(orderNumber, orders) {
 	}
 }
 
+function listItems(orders) {
+	var list = '';
+	for (var i = 0; i < orders.length; i++) {
+		list += `${orders[i].item}, `
+	}
+	// return string after slicing out last space and comma
+	return list.slice(0, -2);
+}
+
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 };
