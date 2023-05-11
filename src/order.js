@@ -21,9 +21,17 @@ function listItems(orders) {
 	return list.slice(0, -2);
 }
 
+function searchOrder(orders, item) {
+	var items = [];
+	for (var i = 0; i < orders.length; i++) {
+		items.push(orders[i].item)
+	}
+	return items.includes(item)
+}
+
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 };
