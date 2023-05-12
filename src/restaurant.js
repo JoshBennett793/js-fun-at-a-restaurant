@@ -26,9 +26,19 @@ function removeMenuItem(restaurant, item, type) {
 	return `Sorry, we don't sell ${item}, try adding a new recipe!`;
 }
 
+function checkForFood(restaurant, item) {
+	var menu = restaurant.menus[item.type];
+	for (var i = 0; i < menu.length; i++) {
+		if (menu[i].name === item.name) {
+			return `Yes, we're serving ${item.name} today!`;
+		}
+	}
+	return `Sorry, we aren't serving ${item.name} today.`;
+}
+
 module.exports = {
   createRestaurant,
   addMenuItem,
   removeMenuItem,
-  // checkForFood
+  checkForFood
 };
